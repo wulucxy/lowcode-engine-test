@@ -1,0 +1,53 @@
+{
+  "name": "grommet-designer",
+  "version": "0.2.0",
+  "private": true,
+  "dependencies": {
+    "@alifd/next": "^1.25.44",
+    "antd": "^4.21.3",
+    "lodash": "^4.17.21",
+    "lz-string": "^1.4.4",
+    "react-ga": "^3.2.0"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "lint": "eslint './src/**/*.js'",
+    "test": "react-app-rewired test",
+    "test:nowatch": "react-app-rewired test --watchAll=false",
+    "e2e": "testcafe firefox cafe-test.js --debug-on-fail",
+    "prettier": "pretty-quick --staged"
+  },
+  "pre-commit": [
+    "prettier",
+    "test:nowatch"
+  ],
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@alilc/lowcode-react-renderer": "^1.0.10",
+    "copy-webpack-plugin": "^10.2.0",
+    "customize-cra": "^1.0.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.1.2",
+    "pretty-quick": "^3.1.0",
+    "react": "^17.0.1",
+    "react-app-rewired": "^2.1.5",
+    "react-dom": "^17.0.1",
+    "react-is": "17.0.2",
+    "react-scripts": "5.0.0"
+  }
+}
